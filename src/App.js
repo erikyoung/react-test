@@ -4,8 +4,14 @@ import { Button } from "./components/Button";
 import { Input } from "./components/Input";
 import { ClearButton } from "./components/ClearButton";
 import * as math from "mathjs";
+import Chart from './components/Chart'; 
+
+
 
 class App extends Component {
+
+
+
   constructor(props) {
     super(props);
 
@@ -24,7 +30,10 @@ class App extends Component {
 
   render() {
     return (
+
       <div className="app">
+
+
         <div className="calc-wrapper">
           <Input input={this.state.input} />
           <div className="row">
@@ -56,10 +65,23 @@ class App extends Component {
               Clear
             </ClearButton>
           </div>
+
+         <h4>Visualization</h4>
+       
+             <Chart  />
+      
+
         </div>
       </div>
     );
+
+
   }
+
+
+
 }
+
+
 
 export default App;
